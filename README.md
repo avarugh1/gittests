@@ -20,3 +20,4 @@ Runs and reports on tests
 ## References
 1. Copy paste Precommit hook for string checks - https://stackoverflow.com/questions/53416905/git-pre-commit-hook-to-check-for-a-string-and-exit-code-1-if-the-string-exists
 1. Great explanation on the different types of hooks - https://www.atlassian.com/git/tutorials/git-hooks
+1. Sharing git hooks with team (since .git folder doesnt get added to vcs) - https://medium.com/@chamikakasun/how-to-share-git-hooks-with-the-team-37424603dd91

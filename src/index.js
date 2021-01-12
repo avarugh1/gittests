@@ -1,2 +1,2 @@
 console.log('Hello World!!!');
-console.log('testing testing pre-commit hook!');
+console.log('pre-commit hook!');

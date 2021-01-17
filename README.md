@@ -33,8 +33,36 @@ samples/*.notsample
 ## CI/CD checks?
 Should we add a check in ci/cd? Add additional checks
 
+CircleCI Check (same as Github Workflow except uses circleci)
+- Probably won't be able to easily comment on Github PRs without some sort of creds
+
 ## Commit+PR bots, github work flows
 Add a bot which checks linting, tests, etc
 Runs and reports on tests
 
+Github Workflow with actions
+Reqs: Python scripts? Tests with testcafe?
+1. Job 1 - Grab all files changed on pull request
+   - Utilize git diff - compare between direct commits if needed
+   - Store output to Github job output
+1. Job 2 - Parse which changed files have the keywords we want.
+   - Check which files have keywords for test notation
+   - Check file type to make sure its runnable
+   - Check file location is in the proper one
+   - Output these files to the user or console
+   - Store output files to Github job output
+1. Job 3 - Run the files
+   - Run the files with the appropriate config and files passed as parameters
+   - Note the output
+1. Job 4 - Output to Github pull request
+   - Show as a check
+   - Or show as a Github comment (can be done through Issue API)
+
+### <ins>References<ins>
+1. Detecting changed files (different than git diff, uses Github repos api) - https://github.com/jitterbit/get-changed-files/blob/master/src/main.ts
+1. Job outputs - https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idoutputs
+1. Comment on github pull request - https://github.com/thollander/actions-comment-pull-request/blob/master/src/main.ts
+
 ## Pull Request templates/other git templates (.github)
+
+## BuildPulse action integration

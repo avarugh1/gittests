@@ -16,15 +16,6 @@ test('Hide an element', async t => {
     await t.expect(populateButton.visible).notOk();
 });
 
-test('Change header color', async t => {
-    const header            = Selector('h1');
-    const removeHeaderColor = ClientFunction(() => {
-        document.querySelector('h1').style.color = '#111';
-    });
-
-    await t.expect(header.getStyleProperty('color')).eql('rgb(47, 164, 207)');
-
-    await removeHeaderColor();
-
-    await t.expect(header.getStyleProperty('color')).eql('rgb(17, 17, 17)');
+test('Fails 50% of the time', async t => {
+    await t.expect(Math.floor((Math.random() * 100) + 1)).gte(50);
 });

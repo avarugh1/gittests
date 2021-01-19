@@ -42,3 +42,7 @@ test('Iterate through list elements', async t => {
         await t.expect(currentCheckbox.textContent).eql(elementInfos[i].text);
     }
 });
+
+test('Always fails', async t => {
+    await t.expect(Math.floor((Math.random() * 100) + 1)).gte(150);
+});

@@ -17,5 +17,6 @@ test('Hide an element', async t => {
 });
 
 test('Fails 50% of the time', async t => {
+    console.log('enter');
     await t.expect(Math.floor((Math.random() * 100) + 1)).gte(50);
 });

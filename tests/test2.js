@@ -44,8 +44,5 @@ test('Iterate through list elements', async t => {
 });
 
 test('Always fails', async t => {
-    console.log('enter2');
-
     await t.expect(Math.floor((Math.random() * 100) + 1)).gte(150);
-    console.log('enter2 finished');
 });
